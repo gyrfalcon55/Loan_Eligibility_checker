@@ -2,14 +2,25 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY requirements.txt .
+# Install OS dependencies if needed (optional)
+RUN apt-get update && apt-get install -y build-essential
 
+# Create virtualenv
 RUN python -m venv /opt/venv
-RUN /opt/venv/bin/pip install --upgrade pip
-RUN /opt/venv/bin/pip install -r requirements.txt
 
-COPY . .
-
+# Set path
 ENV PATH="/opt/venv/bin:$PATH"
 
+# Copy only requirements first (for better caching)
+COPY requirements.txt .
+
+# Install dependencies
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+# Copy the rest of the app
+COPY . .
+
+# Start app
 CMD ["gunicorn", "app:app"]
+
