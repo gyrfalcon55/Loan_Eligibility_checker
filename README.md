@@ -1,4 +1,3 @@
-
 # Loan Eligibility Prediction Model
 
 This project aims to predict the eligibility of an individual for a loan based on 13 input parameters using a **Logistic Regression** model. The model is optimized using **GridSearchCV** for cross-validation and hyperparameter tuning. The project is built with **HTML**, **CSS**, **Bootstrap**, **Python**, and **Flask**, offering a user-friendly web interface to make predictions.
@@ -49,24 +48,21 @@ This project aims to predict the eligibility of an individual for a loan based o
 
 ## Input Parameters
 
-The following 13 parameters are taken as input to predict loan eligibility:
-1. Gender
-2. Age
-3. Income
-4. Credit score
-5. Loan amount
-6. Loan term
-7. Employment status
-8. Education level
-9. Marital status
-10. Number of dependents
-11. Property area
-12. Previous loan history
-13. Loan type
+The following 13 parameters are taken as input to predict loan eligibility (in order):
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+"LoanPurpose"
+"LoanAmount"
+"Age"
+"Gender"
+"Income"
+"EmpExperience"
+"Education"
+"HomeOwnership"
+"LoanInterest"
+"LoanPercent"
+"CreditHistory"
+"CreditScore"
+"PreviousLoans"
 
 ## Acknowledgments
 
