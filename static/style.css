@@ -1,0 +1,70 @@
+/*
+order of data =
+    'loan_int_rate', 
+    'loan_percent_income', 'cb_person_cred_hist_length','credit_score', 
+    'previous_loans']
+*/
+body{
+    background-color: #bdd4e7;
+    background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+
+}
+
+.form-control{
+    border: 2px solid black;
+}
+
+
+.list-group-item{
+    background-color: #bdd4e7;
+    background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+}
+
+
+.form-check-input{
+    border: 2px solid black;
+}
+.container{
+    position: relative;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    width: 50%;
+    height: 40%;
+    border: 2px solid red;
+}
+
+form{
+    margin: 5%;
+}
+
+.col-md-6 mb-1{
+    display: flex;
+    flex-direction:column;
+}
+
+.in-bt{
+    display: flex;
+    flex-direction: row;
+}
+
+.result{
+    margin: 5%;
+}
+
+.btn btn-outlin{
+    background-color: cornsilk;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        position: relative;
+        margin-top: 3%;
+        width: 65%;
+        height: 40%;
+        border: 2px solid red;
+    }
+    
+    form{
+        margin: 5%;
+    }
+}
