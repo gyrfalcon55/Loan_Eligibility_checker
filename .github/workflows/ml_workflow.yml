@@ -5,12 +5,16 @@ on:
 
 jobs:
     image-build:
-        - name: Build Docker Image
-          run: |
+        runs-on: ubuntu-latest
+        steps:
+          - name: Build Docker Image
+            run: |
               docker build -t ml_automation .
         
     image-run:
-        - name: Run Docker Container
-          run: |
+        runs-on: ubuntu-latest
+        needs: image-build
+        steps:
+          - name: Run Docker Container
+            run: |
               docker run -d --name ml_automation_container ml_automation
-        depends-on: image-build
