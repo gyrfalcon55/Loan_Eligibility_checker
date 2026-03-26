@@ -9,7 +9,7 @@ jobs:
         steps:
           - name: Build Docker Image
             run: |
-              docker build -t ml_automation .
+              docker build -t ml_automation -f Dockerfile .
         
     image-run:
         runs-on: ubuntu-latest
