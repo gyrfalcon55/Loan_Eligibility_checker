@@ -17,4 +17,4 @@ jobs:
         steps:
           - name: Run Docker Container
             run: |
-              docker run -d --name ml_automation_container ml_automation
+              docker run -d -p 5000:5000 --name my_cont  ml_automation
